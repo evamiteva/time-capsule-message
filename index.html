@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="mk" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <!--    LINKS-->
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/logo-app.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--      END-->
+    <link class="logo" rel="icon" href="./img/logoff.png" type="image/gif" sizes="16x16">
+    <style>
+        .rating {
+          unicode-bidi: bidi-override;
+          direction: rtl;
+        }
+        .rating > span {
+          display: inline-block;
+          position: relative;
+          width: 1.1em;
+        }
+        .rating > span:hover ~ span:before {
+           content: "\2605";
+           position: absolute;
+        }
+        </style>
+    <title>You</title>
+</head>
+
+<body>
+<form action="message.php" method="post">
+    <!-- NAVBAR-->
+    <nav class="navbar navbar-expand-lg py-3 navbar-dark bg-transparent">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <!-- Logo Image -->
+                <img src="./img/logo-app.png" width="130px" alt="" class="d-inline-block align-middle mr-2">
+            </a>
+
+            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+
+            <div id="navbarSupportedContent" class="collapse navbar-collapse text-center">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="index.html" class="nav-link"><i class="fa fa-home"
+                                aria-hidden="true"></i><br>Home<span class="sr-only">(current)</span></a></li>
+
+                    <li class="nav-item active"><a class="nav-link" href="#zanas"><i class="fa fa-book fa-fw"
+                                aria-hidden="true"></i><br>About us
+                        </a></li>
+
+                    <li class="nav-item active"><a class="plogin-trigger nav-link" href="#" data-target="#plogin"
+                            data-toggle="modal"><i class="fa fa-user" aria-hidden="true"></i><br>Login
+                        </a></li>
+                    <li class="nav-item active"><a class="plogin-trigger nav-link" href="#" data-target="#registerModal"
+                            data-toggle="modal"><i class="fa fa-cog fa-fw" aria-hidden="true"></i><br>Sign Up
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+    </nav>
+
+
+    <section>
+
+        <div id="plogin" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button data-dismiss="modal" class="close">&times;</button>
+                        <h4>Sign In</h4>
+                        <form>
+                            <input type="text" name="p_prezime" id="username" class="username form-control"
+                                placeholder="Username" />
+                            <input type="password" name="p_password" id="password" class="password form-control"
+                                placeholder="Password" />
+                            <input id="najavise" class="btn btn-warning" type="submit" value="Sign In" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="registerModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        
+                        <button data-dismiss="modal" class="close" onclick="redirectToSignUpPage()">&times;
+                        <h4>Sign Up</h4>
+                    </button>
+                        <script>
+                            function redirectToSignUpPage() {
+                                // Specify the URL of the target HTML page
+                                var signUpPageUrl = "termin.html";
+                        
+                                // Redirect to the target page
+                                window.location.href = signUpPageUrl;
+                            }
+                        </script>
+                        <form>
+                            <input type="text" id="register_name" class="username form-control"
+                                placeholder="Name and Surname" />
+                                <input type="text" id="register_username" class="username form-control"
+                                placeholder="Username" />
+                            <input type="password" id="register_password" class="password form-control"
+                                placeholder="Password" />
+                                <input id="registrirajse" class="btn btn-primary" type="submit" value="Sign Up" style="background-color: orange;" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider">
+            <img src="./img/pexels-jordan-benton-1095601.jpg" alt="">
+            <div class="text">
+                <h3 class="font-poppins">My time capsule - You </h3>
+                <p class="font-poppins">"Sealing Memories, Sharing Stories: Time Capsule Messages – A Bridge Through Time."</p>
+            </div>
+        </div>
+
+
+        <div class="container-cards py-5">
+            <div class="row">
+
+
+                <div class="col-md-4">
+                    <div class="slika">
+                        <img src="./img/mario-slika.jpg">
+                        <h3 class="text-uppercase">Mario Pleskov</h3>
+                        <p>UX/UI Design</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="slika">
+                        <img src="./img/eva-slika.jpg">
+                        <h3 class="text-uppercase">Eva Miteva</h3>
+                        <p>Front end developer</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="slika">
+                        <img src="./img/stanela-slika.jpg">
+                        <h3 class="text-uppercase">Stanela Gacova</h3>
+                        <p>Back end developer </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="zanas" class="bg-transparent">
+        <div class="container py-5">
+            <div class="row py-4">
+                <br>
+                <div class="col-md-6 mb-4 mb-lg-0"><img src="./img/logo-app.png" alt="" width="180" class="mb-3">
+                    <br>
+                    <br>
+                    <br>
+                    <h6 class="text-uppercase font-weight-bold mb-4">Contact</h6>
+                    <p class="font-italic">+389 12 345 678</p>
+                    <p class="font-italic">+389 34 567 789</p>
+                    <br><br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h6 class="text-uppercase font-weight-bold mb-4">About <b style="color: orange;">You</b></h6>
+                    <p class="font-italic"><b>You </b>  , a fascinating blend of history and anticipation, serve as vessels that bridge the gap between generations.
+                         These encapsulated treasures contain glimpses of the past, providing a unique perspective for future generations. </p>
+                    <br><br>
+                    <br>
+                    <br>
+                    <h6 class="text-uppercase font-weight-bold mb-4">What is special about Us</h6>
+                    <p class="font-italic">A time capsule app also has a "surprise" feature. When the capsule is opened, the user will be surprised with the text of the message, 
+                        which may contain important information that he may have forgotten at that moment. 
+                        This is a great way to reflect and rediscover moments that might have been forgotten. </p>
+                </div>
+                <div class="col-md-5 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase font-weight-bold mb-4">Location</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="https://www.google.com/maps/@41.7345532,22.1972179,21z"
+                                style="text-decoration: none; color: white;"><img src="img/map.png"
+                                    style="width: 400px; height: 227px;"></a></li>
+                                    <br>  <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    
+                                    <h6 class="text-uppercase font-weight-bold mb-4">What can we offer </h6>
+                                    <p class="font-italic"> The real function of this application is the ability to create "capsules". When a user creates a capsule, 
+                                        they choose the length of time they want to store their message for - from one month to dozens of years into the future. </p>
+                                        <br>  <br>
+                                        <br>
+                                        <h6 class="text-uppercase font-weight-bold mb-4">What can you expect from <b style="color: orange;">You</b> </h6>
+                                        <p class="font-italic">  Our responsibility is to solve your problems. 
+                                            Safety is a fundamental aspect of everyday life, an important and unavoidable factor that affects all other aspects of our life. 
+                                            Your security is most important to us, as it ensures the stability, development and quality of our application.</p>    
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <!--     Copyrights -->
+            <div class="bg-transparent py-4">
+                <div class="container text-center">
+                    <p class="mb-0 py-1 text-white" style="font-size: 12px">© You - All rights are reserverd.</p>
+                    <p class="mb-0 py-1 text-white" style="font-size: 12px">Have a safe flight – and please let us know about your journey with us.</p>
+                    <div class="rating" >
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#najavise').on('click', function (e) {
+                e.preventDefault()
+
+                let email = $('#username').val()
+                let password = $('#password').val()
+
+                $.post('./login.php', {
+                    email, password
+                })
+                    .then(function (response) {
+                        alert(response)
+                    })
+                    .catch((response) => {
+                        console.log(response)
+                        setTimeout(() => { console.log('an error occured') }, 1500)
+                    })
+            })
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $('#registrirajse').on('click', function (e) {
+                e.preventDefault()
+
+                let name = $('#register_name').val()
+                let username = $('#register_username').val()
+                let Regpassword = $('#register_password').val()
+
+                $.post('./register.php', {
+                    name, username, Regpassword
+                })
+                    .then(function (response) {
+                        console.log('tuka')
+                        console.log(response)
+                    })
+                    .catch((response) => {
+                        console.log(response)
+                        console.log('aha fana te')
+                        setTimeout(() => { console.log(response) }, 1500)
+                    })
+            })
+        })
+    </script>
+</body>
+
+</html>

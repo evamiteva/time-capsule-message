@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300&display=swap');
+html
+{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Big Shoulders Display', cursive;
+    background-image: url(./img/begeu.jpg);
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container-termin
+{
+    color: #ffffff;
+    border-top: 1px solid #f5ad76;
+    border-bottom: 1px solid #f5ad76;
+    background-color: rgba(52, 60, 74, .4);
+    backdrop-filter: blur(10px);
+}
+.container-termin h2
+{
+    text-align: center;
+}
+.btn {
+    border: none!important;
+    color: #fff!important;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 45px;
+    margin: 0 0 2em;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+}
+.btn {
+    margin: 0 1em 2em!important;
+}
+
+.btn:hover {
+    text-decoration: none;
+}
+.btn-1 {
+    padding-top: 10px!important;
+    background: #343E4A!important;
+    backdrop-filter: blur(10px);
+    font-weight: 100;
+}
+.btn-1 svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.btn-1 rect {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+}
+.btn-1:hover {
+    background: rgba(225, 51, 45, 0);
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.btn-1:hover rect {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media (min-width 768px) and (max-width 979px)
+{
+    body
+    {
+        width: 100%;
+        height: 100%;
+    }
+}
+.navbar-nav li
+{
+    margin: 8px;
+}
+.nav-item:hover i
+{
+    transition: 0.4s ease-in-out;
+    text-shadow: 2px 2px 8px white;
+    color: #343E4A;
+}
+.navbar-nav > li{
+  padding-left:5px;
+  padding-right:5px;
+}
+.col-hidden
+{
+    visibility: hidden;
+    display: none;
+}
+.container-termin
+{
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*LOGIN FORM*/
+
+h4 {
+  font-weight: bold;
+  color: #fff;
+}
+.close {
+  color: #fff;
+  transform: scale(1.2)
+}
+.modal-content {
+  font-weight: bold;
+    background: white;
+/*  background: linear-gradient(to bottom right,#ff6b55,#999d60);*/
+    text-align: center;
+}
+.form-control {
+  margin: 1em 0;
+}
+.form-control:hover, .form-control:focus {
+  box-shadow: none;  
+  border-color: #fff;
+}
+.username, .password {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 2px solid #eee;
+  padding-left: 0;
+  font-weight: normal;
+  background: transparent;  
+}
+.form-control::-webkit-input-placeholder {
+  color: #eee;  
+}
+.form-control:focus::-webkit-input-placeholder {
+  font-weight: bold;
+  color: #fff;
+}
+.vlogin, .plogin {
+  padding: 6px 20px;
+  border-radius: 20px;
+  background: none;
+  border: 2px solid #FAB87F;
+  color: #FAB87F;
+  font-weight: bold;
+  transition: all .5s;
+  margin-top: 1em;
+}
+.vlogin:hover, .plogin:hover {
+  background: #f5ad76;
+  color: #fff;
+}
+.slider
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider img
+{
+    width: 100%;
+    display: block;
+}
+
+.text
+{
+    color: #ffffff;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(0,0,0,.4);
+    backdrop-filter: blur(10px);
+}
+.text h3
+{
+    font-size: 44px;
+}
+.icon-active i
+{
+    text-shadow: 2px 2px 8px white;
+    color: #343E4A;
+}
+
+/*END*/
+
+/*CARDS*/
+
+.container-cards
+{
+    cursor: default;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+.slika 
+{
+    padding: 15px;
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: #ffffff;
+    transition: all .3s ease-in-out;
+    background-color: rgba(52, 60, 74, .4);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+}
+.slika img
+{
+    border-radius: 40px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+.slika:hover
+{
+    transition-delay: inherit;
+    transform: scale(1.1);
+}
+.slika h3
+{
+    font-size: 17px;
+}
+
+/*END OF CARDS*/
+
+
+
+/*FOOTER*/
+
+#button-addon1 {
+  color: #ffc371;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #fff;
+  font-style: italic;
+}
+
+.form-control.shadow-0:focus {
+  box-shadow: none;
+}
+footer
+{
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+
+/*END*/
